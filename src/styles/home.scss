@@ -1,0 +1,107 @@
+.error,
+.withdraw,
+.red {
+	font-weight: 500;
+	color: #ff0044;
+}
+
+.access,
+.set,
+.green {
+	font-weight: 500;
+	color: #9eff00;
+}
+
+//===========================================================================
+.quantity {
+	padding-block: toRem(20);
+	&-body {
+		max-width: toRem(900);
+		margin-inline: auto;
+	}
+	&-form {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&-list {
+	}
+}
+
+.advisor {
+	padding-block: toRem(20);
+	&-container {
+	}
+	&-form {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&-recommend {
+		span {
+			text-transform: capitalize;
+			font-weight: 500;
+		}
+		margin-bottom: toRem(20);
+	}
+	&-img {
+		display: block;
+		max-width: toRem(698);
+		border-radius: toRem(12);
+		aspect-ratio: 698 / 423;
+	}
+}
+//===========================================================================
+
+.range {
+	padding-block: toRem(20);
+}
+
+//===========================================================================
+.account {
+	padding-block: toRem(20);
+	&-form {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&-sum {
+		display: flex;
+		column-gap: toRem(5);
+		span {
+			font-weight: 500;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+}
+
+//===========================================================================
+
+.login-page {
+	padding-block: toRem(20) toRem(40);
+}
+
+//===========================================================================
+.task {
+	padding-block: toRem(20);
+	&-pt-40 {
+		padding-block-start: toRem(40);
+	}
+	&-title {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&-list {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&-text {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+}

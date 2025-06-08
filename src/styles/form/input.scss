@@ -1,0 +1,23 @@
+.input {
+	width: 100%;
+	padding-block: toRem(6);
+	border-bottom: toRem(1) solid #333;
+	height: toRem(33);
+	line-height: 1.5;
+	color: $mainColor;
+	outline: none;
+	transition: border-color 0.3s;
+	&-pr-45 {
+		padding-inline-end: toRem(45);
+	}
+	&::placeholder {
+		transition: opacity 0.3s;
+		color: #656567;
+	}
+	&:focus {
+		border-color: $accentColor;
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}

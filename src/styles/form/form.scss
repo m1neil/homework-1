@@ -1,0 +1,73 @@
+.form {
+	&-row {
+		border: toRem(1) solid #262626;
+		border-radius: toRem(8);
+		padding: toRem(24) toRem(40);
+		background-color: rgba(36, 36, 36, 0.5);
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+	&-label {
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+	&-input {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&-button {
+		&-center {
+			position: relative;
+			inset-inline-start: 50%;
+			translate: -50% 0;
+		}
+	}
+	&-items {
+		display: grid;
+		gap: toRem(30);
+		grid-template-columns: repeat(2, 1fr);
+		.form-row {
+			margin-bottom: 0;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&-result {
+		span {
+			font-weight: 500;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&-error {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&-button-icon {
+		position: relative;
+	}
+	&-button-show-hide {
+		position: absolute;
+		inset-inline-end: toRem(10);
+		inset-block-start: toRem(6);
+		width: toRem(20);
+		aspect-ratio: 1;
+		transition: opacity 0.3s;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}

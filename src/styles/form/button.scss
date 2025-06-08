@@ -1,0 +1,18 @@
+.button {
+	display: inline-block;
+	border-radius: toRem(8);
+	min-width: toRem(170);
+	padding-inline: toRem(20);
+	padding-block: toRem(14);
+	background-color: $accentColor;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #1a1a1a;
+	text-transform: capitalize;
+	transition: background-color 0.4s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #85d604;
+		}
+	}
+}
