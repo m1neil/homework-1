@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react"
 
-const AccountantBank = ({ usdRate = 42, euroRate = 49, taxService = 3, minAmountReplenishment = 1, minWithdrawalAmount = 20 }) => {
+const AccountantBank = ({
+	usdRate = 42,
+	euroRate = 49,
+	taxService = 3,
+	minAmountReplenishment = 1,
+	minWithdrawalAmount = 20 }
+) => {
 	const [sumAccount, setSumAccount] = useState(0)
 	const [valueAccrual, setValueAccrual] = useState('') // сума зарахування
 	const [valueWithdraw, setValueWithdraw] = useState('') // сума зняття
@@ -67,7 +73,6 @@ const AccountantBank = ({ usdRate = 42, euroRate = 49, taxService = 3, minAmount
 			return
 		}
 
-
 		const sumWithdraw = parseFloat(valueWithdraw)
 		const costService = getSumCommission(sumWithdraw)
 
@@ -125,7 +130,9 @@ const AccountantBank = ({ usdRate = 42, euroRate = 49, taxService = 3, minAmount
 		else setErrorValueAccrual('')
 	}
 
-	const createError = (text = 'error') => <div className="form-error error">{text}</div>
+	const createError = (text = 'error') => {
+		return <div className="form-error error">{text}</div>
+	}
 
 	const sumInUsd = currencyConverter('usd')
 	const sumInEuro = currencyConverter('euro')
@@ -139,12 +146,7 @@ const AccountantBank = ({ usdRate = 42, euroRate = 49, taxService = 3, minAmount
 				<div className="account-form form">
 					<div className="form-row">
 						<label htmlFor="value-accrual" className="form-label label">Enroll in an account</label>
-						<input
-							className="form-input input"
-							onChange={handleValueAccrual}
-							onFocus={handleFocusChange}
-							name="value-accrual"
-							id="value-accrual"
+						<input className="form-input input" onChange={handleValueAccrual} onFocus={handleFocusChange} name="value-accrual" id="value-accrual"
 							value={valueAccrual}
 							type="text"
 							placeholder="Type here"

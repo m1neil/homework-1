@@ -15,10 +15,7 @@ const QuantityPassengers = ({ min = 1, initValue = 1 }) => {
 
 	const handleValueInputChange = e => {
 		let value = e.target.value
-		if (regExp.test(value)) {
-			value = value.replace(regExp, '')
-			return
-		}
+		if (regExp.test(value)) return
 		setValueInput(parseInt(value) < min ? min : value)
 	}
 

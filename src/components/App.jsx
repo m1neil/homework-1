@@ -88,7 +88,13 @@ const App = () => {
 						</ul>
 					</div>
 				</div>
-				<AccountantBank />
+				<AccountantBank
+					usdRate={42}
+					euroRate={49}
+					taxService={3}
+					minAmountReplenishment={1}
+					minWithdrawalAmount={20}
+				/>
 				<div className="task">
 					<div className="task-container">
 						<h2 className="task-title title">Задача 5.</h2>
